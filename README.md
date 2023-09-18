@@ -7,8 +7,9 @@ Herein, we present the Generic Single Entity Sequencing platform (GSE-Seq), whic
 The customized scripts only require a standard computer with sufficient RAM to support the in-memory operations.
 
 ### OS Requirements & Hardware Requirements
-This package is supported for Linux. The package has been tested on the following systems: Ubuntu 18.04
-RAM: 256 GB
+This package is supported for Linux. The package has been tested on the following systems:  
+Ubuntu 18.04  
+RAM: 256 GB  
 CPU: 128 cores
 
 ### Dependencies
@@ -18,31 +19,39 @@ The custom scripts supports Python >=3.6. Installation through bioconda is the r
 Make sure you have installed the conda packaging manager (e.g. miniconda or anaconda) before starting.
 
 1. Create a new environment:
-   conda create -n GSE_Seq python=3.6
+```shell script
+conda create -n GSE_Seq python=3.6
+```
 2. Activate the conda environment using the following code:
-   conda activate GSE_Seq
+```shell script
+conda activate GSE_Seq
+```
 3. Instal the  dependencies:
-   conda install -c conda-forge -c bioconda fuzzysearch=0.7.3 pyfastx=2.0.0 seqkit=0.15.0 starcode=1.4
+```shell script
+conda install -c conda-forge -c bioconda fuzzysearch=0.7.3 pyfastx=2.0.0 seqkit=0.15.0 starcode=1.4  
+```
+You can also install them one by one using the following links:  
 
-
-You can also install them one by one using the following links:
-
-https://github.com/taleinat/fuzzysearch
-https://github.com/lmdu/pyfastx
-https://github.com/shenwei356/seqkit
-https://github.com/gui11aume/starcode
+https://github.com/taleinat/fuzzysearch  
+https://github.com/lmdu/pyfastx  
+https://github.com/shenwei356/seqkit  
+https://github.com/gui11aume/starcode  
 
 ## Usage
-First, please use the following code to set permissions:
-chmod 775 ./1.extract_barcode.sh
+First, please use the following code to set permissions:  
+```shell script
+chmod 775 ./1.extract_barcode.sh  
 chmod 775 ./2.cluster_barcode.sh
+```
 
 1. Extract the barcodes from the fastq file after performing basecalling on the raw Pacbio sequencing. You can edit the location of the fastq file.
-	bash ./1.extract_barcode.sh
-
+```shell script
+bash ./1.extract_barcode.sh  
+```
 2. Cluster the barcodes.
-	bash ./2.cluster_barcode.sh
-
+```shell script
+bash ./2.cluster_barcode.sh  
+```
 ## Citation
 Wang, G., Zhao, L., Shi, Y., Qu, F., Ding, Y., Liu, W., Liu, C., Luo, G., Li, M., Bai, X. and Li, L., 2023. High-throughput generic single-entity sequencing using droplet microfluidics. bioRxiv, pp.2023-08.
 
